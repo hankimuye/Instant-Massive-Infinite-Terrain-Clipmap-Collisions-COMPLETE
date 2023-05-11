@@ -1,6 +1,8 @@
 extends CollisionShape3D
 
-@export var physics_body:Node3D
+#@export var physics_body:Node3D
+#changed it to an onready refering to the player scene. This made the project work for me in godot 4.02
+@onready var physics_body = $"/root/Main/PlayerCharacter"
 
 @export var template_mesh:PlaneMesh
 @onready var faces = template_mesh.get_faces()
